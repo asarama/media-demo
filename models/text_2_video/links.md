@@ -1,7 +1,4 @@
 
-wangfuyun/AnimateLCM
-https://huggingface.co/spaces/wangfuyun/AnimateLCM
-
 
 ByteDance/AnimateDiff-Lightning
 https://huggingface.co/spaces/KingNish/Instant-Video
