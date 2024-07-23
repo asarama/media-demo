@@ -2,6 +2,7 @@
 from helpers import query
 from definitions import PROMPT
 
+# Backup: https://huggingface.co/spaces/Zhenhong/text-to-speech-SpeechT5-demo
 
 API_URL_SUFFIX = "microsoft/speecht5_tts"
 

@@ -2,6 +2,7 @@
 from helpers import query
 from definitions import PROMPT
 
+# Backup: https://huggingface.co/spaces/mrfakename/MeloTTS
 
 API_URL_SUFFIX = "myshell-ai/MeloTTS-English"
 
