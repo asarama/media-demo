@@ -1,4 +1,8 @@
 
+from models.text_2_audio.facebook import main as fb_main
+from models.text_2_audio.riffusion import main as riff_main
+from models.text_2_audio.mustango import main as must_main
+
 from models.text_2_speech.melo import main as melo_main
 from models.text_2_speech.barks import main as barks_main
 from models.text_2_speech.microsoft import main as ms_main
@@ -9,17 +13,9 @@ if MODEL_SET == "text_2_speech":
     melo_main()
     barks_main()
     ms_main()
+elif MODEL_SET == "text_2_audio":
+    fb_main()
+    riff_main()
+    must_main()
 
 print("done")
-
-
-# from transformers import pipeline
-# import scipy
-
-# synthesiser = pipeline("text-to-audio", "facebook/musicgen-small")
-
-# music = synthesiser("dog playing a piano", forward_params={"do_sample": True})
-
-# scipy.io.wavfile.write("musicgen_out.wav", rate=music["sampling_rate"], data=music["audio"])
-
-# print("done")

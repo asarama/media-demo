@@ -2,9 +2,9 @@
 from helpers import query
 from definitions import PROMPT
 
-# Backup: https://huggingface.co/spaces/fffiloni/spectrogram-to-music
+# Backup: https://huggingface.co/spaces/declare-lab/mustango
 
-API_URL_SUFFIX = "riffusion/riffusion-model-v1"
+API_URL_SUFFIX = "declare-lab/mustango"
 
 
 def main():
@@ -15,5 +15,5 @@ def main():
     )
 
     if output:
-        with open("output/riff.flac", "wb") as f:
+        with open("output/mustango.flac", "wb") as f:
             f.write(output.content)
