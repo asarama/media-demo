@@ -1,7 +1,6 @@
 
 from helpers import query
 from definitions import PROMPT
-# facebook/musicgen-small
 
 
 API_URL_SUFFIX = "facebook/musicgen-small"

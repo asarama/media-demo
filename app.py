@@ -1,7 +1,14 @@
 
-from models.text_2_speech.facebook import main
+from models.text_2_speech.melo import main as melo_main
+from models.text_2_speech.barks import main as barks_main
+from models.text_2_speech.microsoft import main as ms_main
 
-main()
+from definitions import MODEL_SET
+
+if MODEL_SET == "text_2_speech":
+    melo_main()
+    barks_main()
+    ms_main()
 
 print("done")
 
