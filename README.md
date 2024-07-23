@@ -3,6 +3,11 @@
 ## Setup
 
 ```
+cp .env.example .env
+```
+
+
+```
 python -m venv venv
 ```
 
