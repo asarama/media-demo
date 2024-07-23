@@ -12,5 +12,7 @@ def main():
         {"inputs": PROMPT},
         API_URL_SUFFIX
     )
-    with open("output/barks.flac", "wb") as f:
-        f.write(output.content)
+
+    if output:
+        with open("output/barks.flac", "wb") as f:
+            f.write(output.content)
