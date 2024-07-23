@@ -13,7 +13,7 @@ def query(payload, api_url_suffix):
             headers=headers,
             json=payload
         )
-        response.raise_for_status()  # Raises an HTTPError for bad responses (4xx or 5xx)
+        response.raise_for_status()
         return response
     except requests.exceptions.HTTPError as http_err:
         print(f"HTTP error occurred: {http_err}")
@@ -25,7 +25,8 @@ def query(payload, api_url_suffix):
             print("Model is loading.")
         # You can add more specific status code checks here
     except requests.exceptions.ConnectionError:
-        print("Failed to connect to the server. Check your internet connection.")
+        print("Failed to connect to the server. \
+              Check your internet connection.")
     except requests.exceptions.Timeout:
         print("Request timed out. The server took too long to respond.")
     except requests.exceptions.RequestException as err:
