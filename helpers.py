@@ -21,6 +21,8 @@ def query(payload, api_url_suffix):
             print("Authentication failed. Check your API token.")
         elif response.status_code == 404:
             print("Model not found. Check the API_URL.")
+        elif response.status_code == 503:
+            print("Model is loading.")
         # You can add more specific status code checks here
     except requests.exceptions.ConnectionError:
         print("Failed to connect to the server. Check your internet connection.")
