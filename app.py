@@ -1,29 +1,13 @@
-import requests
-from transformers import pipeline
-import scipy
 
-from definitions import HF_API_TOKEN
+from models.text_2_speech.facebook import main
 
-API_URL = "https://api-inference.huggingface.co/models/facebook/musicgen-small"
-headers = {"Authorization": f"Bearer {HF_API_TOKEN}"}
-
-
-def query(payload):
-    response = requests.post(API_URL, headers=headers, json=payload)
-    return response
-
-
-# # data = query({"inputs": "The answer to the universe is [MASK]."})
-# # print(data)
-
-output = query({"inputs": "Dogs playing a piano"})
-# Save the audio content as a FLAC file
-with open("output.flac", "wb") as f:
-    f.write(output.content)
+main()
 
 print("done")
 
 
+# from transformers import pipeline
+# import scipy
 
 # synthesiser = pipeline("text-to-audio", "facebook/musicgen-small")
 
